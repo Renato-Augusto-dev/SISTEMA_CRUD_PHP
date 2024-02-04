@@ -7,9 +7,11 @@
     <title>Sistema_crud_php</title>
 </head>
 <body>
-    <header class="menu">
-        <h1>Sistema crud php</h1>
-    </header>
+    <nav id="menu">
+        <ul>
+            <li><h1>Sistema crud php</h1></li>
+        </ul>
+    </nav>
     <section>
         <div class="login">
             <table border="1">
