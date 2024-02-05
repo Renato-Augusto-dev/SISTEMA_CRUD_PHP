@@ -9,11 +9,11 @@
 <body>
     <section>
         <div class="login">
-            <form action="#">
+            <form action="registrar.php" method="post" name="cadatrar">
                 <span><h1>Cadastro</h1></span><br>
-                <input type="email" name="email" id="email" placeholder="E-mail"><br>
-                <input type="password" name="senha" id="senha" placeholder="Senha"><br>
-                <input type="submit" value="Cadatrar"><br>
+                <input type="email" name="email" id="email" placeholder="E-mail" required><br>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required><br>
+                <input type="submit" value="Cadatrar" name="enviar"><br>
                 <a href="index.php">Entrar</a>
             </form>
         </div>

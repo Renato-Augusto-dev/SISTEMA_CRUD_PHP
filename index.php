@@ -9,11 +9,11 @@
 <body>
     <section>
         <div class="login">
-                <form action="#">
+                <form action="entrar.php" method="POST">
                     <span><h1>Sistema Crud PHP</h1></span><br>
-                    <input type="email" name="email" id="email" placeholder="E-mail"><br>
-                    <input type="password" name="senha" id="senha" placeholder="Senha"><br>
-                    <input type="submit" value="enviar"><br>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required><br>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" required><br>
+                    <input type="submit" value="enviar" name="entrar"><br>
                     <a href="cadatro.php">Se não tem uma conta se cadastrar</a>
                 </form>
         </div>
