@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,8 +16,13 @@
                     <span><h1>Sistema Crud PHP</h1></span><br>
                     <input type="email" name="email" id="email" placeholder="E-mail" required><br>
                     <input type="password" name="senha" id="senha" placeholder="Senha" required><br>
-                    <input type="submit" value="enviar" name="entrar"><br>
-                    <a href="cadatro.php">Se não tem uma conta se cadastrar</a>
+                    <input type="submit" value="enviar" name="entrar"><br><br>
+                    <a href="cadatro.php">cadastrar</a><br>
+                    <?php
+                        if(isset($_SESSION['msg'])){
+                            echo $_SESSION['msg'];
+                        }
+                    ?>
                 </form>
         </div>
     </section>

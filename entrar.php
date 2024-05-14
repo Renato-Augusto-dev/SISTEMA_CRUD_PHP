@@ -1,6 +1,7 @@
 <?php
 
-use LDAP\Result;
+    session_start();
+
 
     require_once("conexao.php");
     if(isset($_POST['entrar'])){
@@ -15,15 +16,16 @@ use LDAP\Result;
 
         if(($resultado) AND ($resultado ->rowCount() != 0)){
             $result = $resultado ->fetch(PDO::FETCH_ASSOC);
-            var_dump($result);
+
+
             if(password_verify($password, $result['senha'])){
-                //header('location:adm.php');
-                echo "senha verificada";
+                header('location:adm.php');    
             }else{
-                echo "erro2";
+                header('location:index.php');
+                $_SESSION['msg'] = "Senha ou email incorretos";
             }
         }else{
-            echo "erro";
+            header('location:index.php');
         }
         
     }else{

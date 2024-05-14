@@ -8,7 +8,7 @@ if(isset($_POST['enviar'])){
     $senhaCR = password_hash($senha, PASSWORD_DEFAULT);
     
     $inserir = $conexao -> query("INSERT INTO usuario(email,senha) values ('$email','$senhaCR')");
-    //header("location:index.php");
+    header("location:index.php");
 }else{
     header('location:cadatro.php');
 }
